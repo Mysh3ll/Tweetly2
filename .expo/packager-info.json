@@ -1,5 +1,8 @@
 {
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 60428
+  "packagerPid": 51760,
+  "expoServerNgrokUrl": "https://dv-6ib.mysh3ll.tweetly2.exp.direct",
+  "packagerNgrokUrl": "https://packager.dv-6ib.mysh3ll.tweetly2.exp.direct",
+  "ngrokPid": 64076
 }
