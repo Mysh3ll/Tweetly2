@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 import {View, ActivityIndicator} from "react-native"
 import {Card, Button, FormLabel, FormInput} from "react-native-elements"
-import * as firebase from '../api/FirebaseService'
 
 export default class SignUp extends Component {
     constructor(props) {
@@ -22,7 +21,7 @@ export default class SignUp extends Component {
         })
 
         // Make a call to firebase to create a new user.
-        firebase.signup(this.state.email, this.state.password)
+        this.props.screenProps.signup(this.state.email, this.state.password)
             .then(() => {
                 // then and catch are methods that we call on the Promise returned from
                 // createUserWithEmailAndPassword
@@ -40,26 +39,6 @@ export default class SignUp extends Component {
                 loading: false
             })
             alert("Account creation failed: " + error.message)
-        })
-    }
-
-    _login() {
-        this.setState({
-            loading: true
-        })
-        // Log in and display an alert to tell the user what happened.
-        firebase.login(this.state.email, this.state.password
-        ).then((userData) => {
-                this.setState({
-                    loading: false
-                })
-                this.props.navigation.navigate("SignedIn")
-            }
-        ).catch((error) => {
-            this.setState({
-                loading: false
-            })
-            alert('Login Failed. Please try again: ' + error.message)
         })
     }
 

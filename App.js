@@ -1,8 +1,13 @@
 import React, {Component} from "react"
-import { SignedOut, SignedIn } from "./navigation/Rooter"
+import {SignedOut} from "./navigation/Rooter"
+
+import * as firebase from './api/FirebaseService'
+
 
 export default class App extends Component {
     render() {
-        return <SignedOut />
+        return <SignedOut
+            screenProps={firebase}
+        />
     }
 }

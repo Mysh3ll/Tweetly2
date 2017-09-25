@@ -1,10 +1,10 @@
 import React from "react"
-import { View } from "react-native"
-import { Card, Button, Text } from "react-native-elements"
+import {View} from "react-native"
+import {Card, Button, Text} from "react-native-elements"
 import * as firebase from '../api/FirebaseService'
 
-export default ({ navigation }) => (
-    <View style={{ paddingVertical: 20 }}>
+export default ({navigation}) => (
+    <View style={{paddingVertical: 20}}>
         <Card title="John Doe">
             <View
                 style={{
@@ -18,7 +18,7 @@ export default ({ navigation }) => (
                     marginBottom: 20
                 }}
             >
-                <Text style={{ color: "white", fontSize: 28 }}>JD</Text>
+                <Text style={{color: "white", fontSize: 28}}>JD</Text>
             </View>
             <Button
                 backgroundColor="#03A9F4"
