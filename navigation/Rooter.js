@@ -1,6 +1,8 @@
 import React from "react"
 import {Platform, StatusBar} from "react-native"
 import {StackNavigator} from "react-navigation"
+import * as firebase from '../api/FirebaseService'
+
 
 //StackNavigator
 import SignUp from "../screens/SignUp"
@@ -30,10 +32,11 @@ export const SignedOut = StackNavigator({
             headerStyle,
         }
     },
-    SignedIn: {
-        screen: SignedIn,
-        navigationOptions: {header: null}
-    },
+    // SignedIn: {
+    //     screen: SignedIn,
+    //     navigationOptions: {header: null}
+    // },
+    SignedIn: {screen: ({navigation}) => <SignedIn screenProps={firebase}/>},
 })
 
 

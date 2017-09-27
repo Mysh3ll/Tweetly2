@@ -21,6 +21,7 @@ export default class Profile extends Component {
                     this.setState({
                         loading: false
                     })
+                    console.log("signout")
                     this.props.navigation.navigate("SignedOut")
                 }
             )

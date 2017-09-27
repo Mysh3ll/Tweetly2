@@ -2,12 +2,12 @@ import * as firebase from 'firebase'
 
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyCZRDZ4eWrfO-Zjl1FiGYeCQNSONZgd5UA",
-    authDomain: "mysh3ll-tweetly.firebaseapp.com",
-    databaseURL: "https://mysh3ll-tweetly.firebaseio.com",
-    projectId: "mysh3ll-tweetly",
-    storageBucket: "mysh3ll-tweetly.appspot.com",
-    messagingSenderId: "587180807408"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
 }
 firebase.initializeApp(firebaseConfig)
 
