@@ -11,10 +11,12 @@ const firebaseConfig = {
 }
 firebase.initializeApp(firebaseConfig)
 
+// A method to passs the username and password to firebase and log to the user account
 export const login = (email, password) => {
     return firebase.auth().signInWithEmailAndPassword(email, password)
 }
 
+// A method to passs the username and password to firebase and make a new user account
 export const signup = (email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
 }
@@ -23,10 +25,12 @@ export const auth = () => {
     return firebase.auth()
 }
 
+// A method of firebase to logout an user
 export const signout = () => {
     return firebase.auth().signOut()
 }
 
+// A method of firebase to get all images from database
 export const getImagesFromFirebase = () => {
 
     return new Promise((resolve, reject) => {
@@ -51,6 +55,7 @@ export const getImagesFromFirebase = () => {
  *
  * @memberof HomeScreen
  */
+// A method of firebase to upload the user avatar (image)
 export const uploadAsByteArray = async (pickerResultAsByteArray, progressCallback) => {
 
     try {

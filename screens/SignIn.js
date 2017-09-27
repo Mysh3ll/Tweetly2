@@ -5,7 +5,6 @@ import {Card, Button, FormLabel, FormInput} from "react-native-elements"
 export default class SignIn extends Component {
     constructor(props) {
         super(props)
-        // We have the same props as in our signup.js file and they serve the same purposes.
         this.state = {
             loading: false,
             email: '',
@@ -13,11 +12,12 @@ export default class SignIn extends Component {
         }
     }
 
+    // A method to passs the username and password to firebase and log to the user account
     _login() {
         this.setState({
             loading: true
         })
-        // Log in and display an alert to tell the user what happened.
+        // Log in and display an alert to tell to the user what happened.
         this.props.screenProps.login(this.state.email, this.state.password
         ).then((userData) => {
                 this.setState({
@@ -64,6 +64,5 @@ export default class SignIn extends Component {
             </View>
         )
     }
-
 }
 

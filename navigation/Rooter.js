@@ -2,9 +2,11 @@ import React from "react"
 import {Platform, StatusBar} from "react-native"
 import {StackNavigator} from "react-navigation"
 
+//StackNavigator
 import SignUp from "../screens/SignUp"
 import SignIn from "../screens/SignIn"
 
+//Tabs inside StackNavigator
 import SignedIn from './Tabs'
 
 const headerStyle = {

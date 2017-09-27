@@ -5,7 +5,7 @@ import {Card, Button, FormLabel, FormInput} from "react-native-elements"
 export default class SignUp extends Component {
     constructor(props) {
         super(props)
-        // We have the same props as in our signup.js file and they serve the same purposes.
+        // We have the same props as in our Signin.js file and they serve the same purposes.
         this.state = {
             loading: false,
             email: '',
